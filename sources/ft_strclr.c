@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_puttables.c                                     :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zamazzal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/11 11:32:54 by zamazzal          #+#    #+#             */
-/*   Updated: 2018/10/11 19:05:43 by zamazzal         ###   ########.fr       */
+/*   Created: 2018/10/07 18:52:17 by zamazzal          #+#    #+#             */
+/*   Updated: 2018/10/11 16:44:16 by zamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_puttables(char **table)
+void	ft_strclr(char *s)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	while (table[i])
-		ft_putendl(table[i++]);
+	while (s[i] != '\0')
+	{
+		s[i] = '\0';
+		i++;
+	}
 }

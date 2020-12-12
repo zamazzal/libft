@@ -6,7 +6,7 @@
 /*   By: zamazzal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/05 10:50:16 by zamazzal          #+#    #+#             */
-/*   Updated: 2018/10/11 15:39:12 by zamazzal         ###   ########.fr       */
+/*   Updated: 2019/04/28 19:06:59 by zamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 		i++;
 	}
-	if (s1[i] >= 0 && s2[i] <= 127)
+	if (s1[i] != '\0')
 		return (rzlt);
 	return (1);
 }

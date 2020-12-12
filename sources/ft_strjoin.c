@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zamazzal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/10/07 18:52:17 by zamazzal          #+#    #+#             */
-/*   Updated: 2018/10/11 16:44:16 by zamazzal         ###   ########.fr       */
+/*   Created: 2018/10/08 11:41:20 by zamazzal          #+#    #+#             */
+/*   Updated: 2019/04/27 19:03:04 by zamazzal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strclr(char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (s)
-		ft_strncpy(s, "\0", ft_strlen(s));
+	size_t	len;
+	char	*ptr;
+
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen(s1) + ft_strlen(s2) + 1;
+	if (!(ptr = (char*)malloc(sizeof(char) * len)))
+		return (NULL);
+	ft_strcpy(ptr, s1);
+	ft_strcat(ptr, s2);
+	return (ptr);
 }
